@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>望廬山瀑布</title>
+    <title>望廬山瀑布 </title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <a-scene>
-      <a-scene fog="type: exponential; color: #eecfff; density: 0.1">
-  <a-sky color="#db9dfc"></a-sky>
+    <a-scene > <!--場景設置(可以用霧氣之類的)-->
+    
+      <a-assets>
+        <!--宣告要用的glb檔-->
+        <a-asset-item id="mountain1" src="assets/mountain1.glb"></a-asset-item>
+        
+      </a-assets>
 
-  <a-cone position="0 2 -10" radius-bottom="10" radius-top="2" height="15" color="#4b3061"></a-cone>
+      <!-- 天空 -->
+      <a-sky >
+        
+      </a-sky>
 
-  <a-cylinder 
-    position="0 5 -8.5" 
-    radius="0.5" 
-    height="12" 
-    color="#add8e6"
-    opacity="0.8"
-    animation="property: position; from: 0 5 -8.5; to: 0 4.8 -8.5; dir: alternate; loop: true; dur: 500">
-  </a-cylinder>
+      <!-- 地面  -->
+      <a-plane>
+        
+      </a-plane>
 
-  <a-plane position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#222"></a-plane>
+      <!-- 光源 -->
+      <a-light>
+        
+      </a-light>
+    
 
-  <a-light type="ambient" color="#666"></a-light>
-  <a-light type="point" intensity="2" position="5 10 5" color="#fff"></a-light>
-</a-scene>
+      <!-- 模型代碼(放置位置) -->
+
+
     </a-scene>
   </body>
 </html>
