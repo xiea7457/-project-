@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fog for your SketchFab scenes
+* source:	https://sketchfab.com/3d-models/fog-for-your-sketchfab-scenes-6d12cb257c964f268e418381125ecf0d
+* author:	TGRRRR (https://sketchfab.com/Tgrrrr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fog for your SketchFab scenes" (https://sketchfab.com/3d-models/fog-for-your-sketchfab-scenes-6d12cb257c964f268e418381125ecf0d) by TGRRRR (https://sketchfab.com/Tgrrrr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
