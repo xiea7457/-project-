@@ -8,9 +8,9 @@
     <a-scene > <!--場景設置(可以用霧氣之類的)-->
     
         <!--宣告要用的glb檔-->
-        <a-asset><img id="sky" src="assets/sky.jpg"></a-asset>
-        <a-asset-item id="mountain2" src="assets/mountain2.glb"></a-asset-item>
-        <a-asset-item id="mountain3" src="assets/mountain3.glb"></a-asset-item>
+        <a-asset><img id="sky" src="assets/Scene_-_Root_baseColor.png"></a-asset>
+        <a-asset-item id="mountain" src="assets/mountain.glb"></a-asset-item>
+        <a-asset-item id="waterfall" src="assets/waterfall 2.gltf"></a-asset-item>
 
 
       <!-- 天空 -->
@@ -28,8 +28,8 @@
     
 
       <!-- 模型代碼(放置位置) -->
-      <a-entity gltf-model="#mountain2" position="10 0 0" scale="10 10 10"></a-entity>
-      <a-entity gltf-model="#mountain3" position="-10 0 -15" scale="0.01 0.01 0.01"></a-entity>
+      <a-entity gltf-model="#mountain" position="10 0 0" scale="10 10 10"></a-entity>
+      <a-entity gltf-model="#waterfall" position="-10 0 -15" scale="0.01 0.01 0.01"></a-entity>
 
 
     </a-scene>

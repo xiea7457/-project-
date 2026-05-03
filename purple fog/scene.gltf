@@ -162,10 +162,10 @@
       "name": "Scene_-_Root",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          1.0,
-          1.0,
-          1.0,
-          0.050351434008840575
+          0.57,
+          0.44,
+          0.86,
+          0.6
         ],
         "baseColorTexture": {
           "index": 0
