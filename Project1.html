@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component"></script>
+  </head>
+
+  <body>
+   <a-scene>      
+    <a-entity environment="preset:forest"></a-entity>
+    
+    <a-assets>
+     <a-asset-item id="mountains" src="assets/mount.glb"></a-asset-item> 
+     <a-asset-item id="waterfall" src="assets/looping_waterfall_objects_animation.glb"></a-asset-item>  
+    </a-assets>
+    <a-entity 
+        gltf-model="#mountains"
+        position="0 0 -4.5"
+        scale="1 1 1">
+    </a-entity>
+     <a-entity
+        gltf-model="#waterfall"
+        position="-13 20 22"
+        rotation="0 100 0"
+        scale="0.8 1 0.8">
+    </a-entity>
+    <a-entity
+        gltf-model="#waterfall"
+        position="-12 15 22"
+        rotation="0 120 0"
+        scale="0.8 1.5 0.8">
+    </a-entity>
+    <a-entity
+        gltf-model="#waterfall"
+        position="-12 10 22"
+        rotation="0 100 0"
+        scale="1 2 1">
+    </a-entity>
+    <a-entity
+        gltf-model="#waterfall"
+        position="-11 3 23"
+        rotation="0 140 0"
+        scale="1.5 3 1.5">
+    </a-entity>
+   
+    <a-box height="33" width="0.3" depth="2" position="-13 9 20" rotation="-2 130 2" color="white"></a-box>
+   </a-scene> 
+  </body> 
+</html>
