@@ -2,63 +2,71 @@
   <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component"></script>
+   <style>
+      /* 圖片遮罩樣式：直接浮在場景上方 */
+      #start-screen {
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        /* 背景設為透明，僅顯示圖片本體 */
+        background: transparent url('assets/poem1.png') center/contain no-repeat;
+        /* 確保在最上層，數值必須大於 A-Frame 的 canvas */
+        z-index: 9999;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s ease;
+      }
+
+      /* 提示文字樣式 */
+      #hint {
+        position: absolute;
+        bottom: 20px;
+        color: white;
+        font-family: "Microsoft JhengHei", sans-serif;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px 30px;
+        border-radius: 20px;
+        pointer-events: none; /* 確保點擊文字也能穿透到父層 div */
+      }
+    </style>
   </head>
 
   <body>
-   <a-scene>      
-    <a-entity environment="preset:forest"></a-entity>
-    
-    <a-assets>
-     <a-asset-item id="mountains" src="assets/mount.glb"></a-asset-item> 
-     <a-asset-item id="waterfall" src="assets/waterfall.glb"></a-asset-item>  
-     <a-asset-item id="fog" src="purple fog/scene.gltf"></a-asset-item> 
-     <a-asset-item id="pond" src="assets/pond.glb"></a-asset-item>
-    </a-assets>
-    <a-entity 
-        gltf-model="#mountains"
-        position="0 0 -4.5"
-        scale="10 10 10">
-    </a-entity>
-     <a-entity
-        gltf-model="#waterfall"
-        position="-13 20 22"
-        rotation="0 100 0"
-        scale="0.8 1 0.8">
-    </a-entity>
-    <a-entity
-        gltf-model="#waterfall"
-        position="-12 15 22"
-        rotation="0 120 0"
-        scale="0.8 1.5 0.8">
-    </a-entity>
-    <a-entity
-        gltf-model="#waterfall"
-        position="-12 10 22"
-        rotation="0 100 0"
-        scale="1 2 1">
-    </a-entity>
-    <a-entity
-        gltf-model="#waterfall"
-        position="-11 3 23"
-        rotation="0 140 0"
-        scale="1.5 3 1.5">
-    </a-entity>
-   <a-entity
-        gltf-model="#fog"
-        position="-14 23 27"
-        rotation="0 100 0"
-        scale="1 1 1 ">
-    </a-entity>
-    <a-entity
-        gltf-model="#pond"
-        position="-11.1 0.5 20"
-        rotation="2 50 2"
-        scale="0.02 0.025 0.02">
-    </a-entity>
-    <a-entity id="rig" position="0 0 10"> 
-        <a-camera position="-53 4 15" look-controls wasd-controls></a-camera>
-    </a-entity>
-    <a-box height="33" width="0.3" depth="2" position="-13 9 20" rotation="-2 130 2" color="white"></a-box>
-   </a-scene> 
+
+    <div id="start-screen" onclick="this.style.opacity='0'; setTimeout(()=>{this.remove()}, 500)">
+      <div id="hint">點擊圖片</div>
+    </div>
+    <a-scene>      
+      <a-entity environment="preset:forest"></a-entity>
+      
+      <a-assets>
+        <a-asset-item id="mountains" src="assets/mount.glb"></a-asset-item> 
+        <a-asset-item id="waterfall" src="assets/waterfall.glb"></a-asset-item>  
+        <a-asset-item id="fog" src="purple fog/scene.gltf"></a-asset-item> 
+        <a-asset-item id="pond" src="assets/pond.glb"></a-asset-item>
+      </a-assets>
+
+\
+      <a-entity gltf-model="#mountains" position="0 -1 -4.5" scale="10 10 10"></a-entity>
+
+      <a-entity gltf-model="#waterfall" position="-13 20 22" rotation="0 100 0" scale="0.8 1 0.8"></a-entity>
+      <a-entity gltf-model="#waterfall" position="-12 15 22" rotation="0 120 0" scale="0.8 1.5 0.8"></a-entity>
+      <a-entity gltf-model="#waterfall" position="-12 10 22" rotation="0 100 0" scale="1 2 1"></a-entity>
+      <a-entity gltf-model="#waterfall" position="-11 3 23" rotation="0 140 0" scale="1.5 3 1.5"></a-entity>
+
+      <a-entity gltf-model="#fog" position="-14 23 27" rotation="0 100 0" scale="1 1 1"></a-entity>
+      <a-entity gltf-model="#pond" position="-11.1 0 20" rotation="2 50 2" scale="0.02 0.025 0.02"></a-entity>
+
+
+      <a-entity id="rig" position="0 0 10"> 
+          <a-camera position="-53 4 15" look-controls wasd-controls></a-camera>
+      </a-entity>
+
+      <a-box height="33" width="0.5" depth="2" position="-13 11 21" rotation="-2 130 2" color="white"></a-box>
+    </a-scene> 
   </body> 
 </html>
